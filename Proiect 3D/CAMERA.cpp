@@ -3,7 +3,6 @@
 #include <math.h>
 #include "SOIL.h"
 
-
 enum {
 	NONE, NSHADOW, BSHADOW, WSHADOW
 };
@@ -31,7 +30,7 @@ GLfloat leftwallshadow[4][4];
 GLfloat floorshadow[4][4];
 GLfloat lightpos[] = { 0.f, 80.f, -350.f, 1.f };
 
-/* Matricea pentru umbre */
+/* Calculul matricii pentru umbre */
 void shadowmatrix(GLfloat shadowMat[4][4], GLfloat groundplane[4], GLfloat lightpos[4])
 {
 	GLfloat dot;

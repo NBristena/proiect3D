@@ -102,6 +102,7 @@ void perna(void)
 ```
 
 ### Teste de adancime si iluminare
+ Iluminarea poate fi observata pe sferele din mijlocul meselor, acestea fiind mai albe in partea dinspre bec, iar testul de adancime face ca varful conului sa fie desenat prin mijlocul blatului si nu in fata sau spatele lui.
 ```C++
 //Am salvat pozitia luminii intr-un vector pentru a o putea folosi si la desenarea becului
 GLfloat lightpos[] = { 0.f, 80.f, -350.f, 1.f };
@@ -115,7 +116,6 @@ GLfloat lightpos[] = { 0.f, 80.f, -350.f, 1.f };
 	glLightfv(GL_LIGHT0, GL_AMBIENT, alb);
 	glLightfv(GL_LIGHT0, GL_POSITION, lightpos);
 ```
- Iluminarea poate fi observata pe sferele din mijlocul meselor, acestea fiind mai albe in partea dinspre bec, iar testul de adancime face ca varful conului sa fie desenat prin mijlocul blatului si nu in fata sau spatele lui.
 
 ### Texturare
 Am folosit 3 poze diferite pentru texturi (podea, pereti, tavan). Functia de incarcare a texturii peretilor este folosita in cele 3 functii de desenare pentru fiecare perete in parte.

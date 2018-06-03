@@ -245,4 +245,5 @@ Nota de originalitate a proiectului o reprezinta design-ul nonconformist al mese
  - umbre
 
 ## Bibliografie
--- coduri sursa explicate de domnul profesor de la curs
+- coduri sursa explicate de domnul profesor la curs
+- teme efectuate pentru laborator

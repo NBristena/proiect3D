@@ -4,8 +4,7 @@
 ##
 ## Descrierea proiectului
 Tema aleasa este o sala de lectura pentru copii. Am considerat ca aceasta trebuie neaparat sa contina mese, insa prezenta scaunelor este optionala (deoarece copiii prefera sa stea pe jos). In plus design-ul camerei trebuia sa confere o atmosfera prietenoasa celor mici. 
-Proiectul este simplu si intruneste aproape toate cunostiintele acumulate la curs.
- ![N|Solid](https://lh4.googleusercontent.com/Kxsku4TyfcaWYP3QGUIXxCBHimgwSG1yqVfntzdw3HkppHNDVMJOjL3GosN59cAHWUPe_UayRo0p-g=w1304-h702-rw)
+Proiectul este unul simplu, dar intruneste aproape toate cunostiintele acumulate la curs.
 
 ## Scena a fost realizeaza cu ajutorul :
 - obiectelor cuadrice

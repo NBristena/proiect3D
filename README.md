@@ -1,11 +1,11 @@
 # Proiect Grafica pe calculator : Sala de lectura pentru copii
-##### Nicolescu Bristena | Grupa 253
-##### Zanfir Andrei | Grupa 254
+#### Nicolescu Bristena | Grupa 253
+#### Zanfir Andrei | Grupa 254
 ##
 ##
 ##
 ## Descrierea proiectului
-Tema aleasa pentru acest proiect este o camera de lectura pentru copii.
+Tema aleasa este o sala de lectura pentru copii. Am considerat ca aceasta trebuie neaparat sa contina mese, insa prezenta scaunelor este optionala (deoarece copiii prefera sa stea pe jos). In plus design-ul camerei trebuia sa confere o atmosfera prietenoasa celor mici. 
 Proiectul este simplu si intruneste aproape toate cunostiintele acumulate la curs.
 # ![N|Solid](https://lh5.googleusercontent.com/mmCFqvFSKCRcAeyBQJ03921OjN-GQ8XTExFaCEoYLYa12hgo0c6oG6rqPVbSnETtJHiGaJZYxNCrZFe6ZHv7=w642-h682-rw)
 
@@ -159,8 +159,17 @@ void drawTexturePereteSpate() {
 	glDisable(GL_TEXTURE_2D);
 ```
 ### Umbre
-
+cod
 
 
 ## Originalitate
+.... insa atunci cand am venit cu solutia finala pentru forma mesei am considerat ca se potriveste mai bine intr-un cadru pueril.
+
 Nota de originalitate a proiectului o reprezinta design-ul nonconformist al meselor
+
+## Impartirea task-urilor
+Andrei: conturarea camerei, textura podelei, model masa, umbre
+Bristena: texturi pereti+tavan, perna torus, iluminare, test de adancime
+
+## Bibliografie
+-

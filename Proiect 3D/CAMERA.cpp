@@ -3,6 +3,7 @@
 #include <math.h>
 #include "SOIL.h"
 
+
 enum {
 	NONE, NSHADOW, BSHADOW, WSHADOW
 };
@@ -110,7 +111,7 @@ void masa1(void)
 	glPushMatrix();
 	glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, masa1_mat);
 	glTranslatef(-130.f, -70.f, -480.f);
-	glCallList(MASA);
+	glCallList(BLAT);
 	glPopMatrix();
 
 	glPushMatrix();
@@ -130,7 +131,7 @@ void masa2(void)
 	glPushMatrix();
 	glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, masa2_mat);
 	glTranslatef(-50.f, -70.f, -370.f);
-	glCallList(MASA);
+	glCallList(BLAT);
 	glPopMatrix();
 
 	glPushMatrix();
@@ -150,7 +151,7 @@ void masa3(void)
 	glPushMatrix();
 	glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, masa3_mat);
 	glTranslatef(30.f, -70.f, -450.f);
-	glCallList(MASA);
+	glCallList(BLAT);
 	glPopMatrix();
 
 	glPushMatrix();
@@ -170,7 +171,7 @@ void masa4(void)
 	glPushMatrix();
 	glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, masa4_mat);
 	glTranslatef(110.f, -70.f, -400.f);
-	glCallList(MASA);
+	glCallList(BLAT);
 	glPopMatrix();
 
 	glPushMatrix();
@@ -396,7 +397,6 @@ int main(int argc, char *argv[])
 	glutInitDisplayMode(GLUT_RGBA | GLUT_DEPTH | GLUT_STENCIL | GLUT_DOUBLE);
 	(void)glutCreateWindow("Sala de lectura pentru copii");
 	glutDisplayFunc(draw);
-	glutKeyboardFunc(key);
 
 	int subMenu = glutCreateMenu(menu);
 	glutAddMenuEntry("Normal", NSHADOW);

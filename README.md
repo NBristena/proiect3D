@@ -156,17 +156,93 @@ void drawTexturePereteSpate() {
 	glDisable(GL_TEXTURE_2D);
 ```
 ### Umbre
-cod
+Am avut nevoie de o functie care creeaza o matrice de umbre si o functie care calculeaza ecuatia unui plan cu ajutorul a 3 puncte care ii apartin. In functiile pentru desenarea umbrei au fost incluse obiectele care lasa umbra pe planul respectiv iar in functia main se calculeaza planul si matricea cu 3 puncte setate de pe podea si perete.
+```C++
+//Calculul matricii pentru umbre
+void shadowmatrix(GLfloat shadowMat[4][4], GLfloat groundplane[4], GLfloat lightpos[4])
+{
+	GLfloat dot;
+	dot = groundplane[X] * lightpos[X] +
+		  groundplane[Y] * lightpos[Y] +
+	      groundplane[Z] * lightpos[Z] +
+		  groundplane[W] * lightpos[W];
+	shadowMat[0][0] = dot - lightpos[X] * groundplane[X];
+	shadowMat[1][0] = 0.f - lightpos[X] * groundplane[Y];
+	shadowMat[2][0] = 0.f - lightpos[X] * groundplane[Z];
+	shadowMat[3][0] = 0.f - lightpos[X] * groundplane[W];
+
+	shadowMat[X][1] = 0.f - lightpos[Y] * groundplane[X];
+	shadowMat[1][1] = dot - lightpos[Y] * groundplane[Y];
+	shadowMat[2][1] = 0.f - lightpos[Y] * groundplane[Z];
+	shadowMat[3][1] = 0.f - lightpos[Y] * groundplane[W];
+
+	shadowMat[X][2] = 0.f - lightpos[Z] * groundplane[X];
+	shadowMat[1][2] = 0.f - lightpos[Z] * groundplane[Y];
+	shadowMat[2][2] = dot - lightpos[Z] * groundplane[Z];
+	shadowMat[3][2] = 0.f - lightpos[Z] * groundplane[W];
+
+	shadowMat[X][3] = 0.f - lightpos[W] * groundplane[X];
+	shadowMat[1][3] = 0.f - lightpos[W] * groundplane[Y];
+	shadowMat[2][3] = 0.f - lightpos[W] * groundplane[Z];
+	shadowMat[3][3] = dot - lightpos[W] * groundplane[W];
+}
+
+//Ecuatia planului cu ajutorul a 3 puncte
+void findplane(GLfloat plane[4], GLfloat v0[3], GLfloat v1[3], GLfloat v2[3])
+{
+	GLfloat vec0[3], vec1[3];
+	vec0[X] = v1[X] - v0[X];
+	vec0[Y] = v1[Y] - v0[Y];
+	vec0[Z] = v1[Z] - v0[Z];
+
+	vec1[X] = v2[X] - v0[X];
+	vec1[Y] = v2[Y] - v0[Y];
+	vec1[Z] = v2[Z] - v0[Z];
+
+	plane[A] = vec0[Y] * vec1[Z] - vec0[Z] * vec1[Y];
+	plane[B] = -(vec0[X] * vec1[Z] - vec0[Z] * vec1[X]);
+	plane[C] = vec0[X] * vec1[Y] - vec0[Y] * vec1[X];
+
+	plane[D] = -(plane[A] * v0[X] + plane[B] * v0[Y] + plane[C] * v0[Z]);
+}
+
+void drawShadowPodea() {
+	glDisable(GL_DEPTH_TEST);
+	glDisable(GL_LIGHTING);
+
+	glPushMatrix();
+    	glMultMatrixf((GLfloat *)floorshadow);
+    	masa1();	masa2();	masa3();	masa4();	perna();
+	glPopMatrix();
+
+	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_LIGHTING);
+}
+
+// Calcul plan si matrice pentru 3 pct de pe podea
+	v0[X] = -200.f; v0[Y] = -100.f; v0[Z] = -320.f;
+	v1[X] = 200.f;  v1[Y] = -100.f; v1[Z] = -320.f;
+	v2[X] = 200.f;  v2[Y] = -100.f; v2[Z] = -620.f;
+	findplane(plane, v0, v1, v2);
+	shadowmatrix(floorshadow, plane, lightpos);
+```
 
 
 ## Originalitate
-.... insa atunci cand am venit cu solutia finala pentru forma mesei am considerat ca se potriveste mai bine intr-un cadru pueril.
-
-Nota de originalitate a proiectului o reprezinta design-ul nonconformist al meselor
+Tema aleasa initial era o simpla sala de lectura compusa din mai multe mese si scaune, insa atunci cand am ajuns la solutia finala pentru forma meselor am considerat ca se potriveste mai bine intr-un cadru pueril si jucaus.
+Nota de originalitate a proiectului o reprezinta design-ul nonconformist al meselor impreuna cu atmosfera naiva indusa de alegerea texturilor.
 
 ## Impartirea task-urilor
-Andrei: conturarea camerei, textura podelei, model masa, umbre
-Bristena: texturi pereti+tavan, perna torus, iluminare, test de adancime
+#### *Bristena:*
+ - texturarea peretilor si a tavanului
+ - perna torus
+ - iluminare
+ - test de adancime
+ #### *Andrei:*
+ - conturarea camerei si setarea perspectivei
+ - textura podelei
+ - modelul meselor
+ - umbre
 
 ## Bibliografie
--
+-- coduri sursa explicate de domnul profesor de la curs

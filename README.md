@@ -2,8 +2,6 @@
 #### Nicolescu Bristena | Grupa 253
 #### Zanfir Andrei | Grupa 254
 ##
-##
-##
 ## Descrierea proiectului
 Tema aleasa este o sala de lectura pentru copii. Am considerat ca aceasta trebuie neaparat sa contina mese, insa prezenta scaunelor este optionala (deoarece copiii prefera sa stea pe jos). In plus design-ul camerei trebuia sa confere o atmosfera prietenoasa celor mici. 
 Proiectul este simplu si intruneste aproape toate cunostiintele acumulate la curs.

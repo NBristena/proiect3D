@@ -7,7 +7,7 @@
 ## Descrierea proiectului
 Tema aleasa pentru acest proiect este o camera de lectura pentru copii.
 Proiectul este simplu si intruneste aproape toate cunostiintele acumulate la curs.
-![N|Solid](https://lh5.googleusercontent.com/dsubGilKyHnQeFPpCsVmBATX0M3OAeUPoszU_uhuMt3PEKSYXdzOzfH9c7vHs44WPDqfM49r82Ktzq8iiE2q=w1304-h677-rw)
+![N|Solid](https://lh5.googleusercontent.com/mmCFqvFSKCRcAeyBQJ03921OjN-GQ8XTExFaCEoYLYa12hgo0c6oG6rqPVbSnETtJHiGaJZYxNCrZFe6ZHv7=w642-h682-rw)
 
 
 ## Scena a fost realizeaza cu ajutorul :
